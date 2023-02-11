@@ -1,0 +1,107 @@
+@import "./../../index.scss";
+.label-value {
+  color: $color-secondary !important;
+  font: 1.2em $font--medium !important;
+}
+.label-style {
+  color: $color-primary;
+  font: 1.2em $font--heavy;
+}
+.profile {
+  &__container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    @include for-desktop-up {
+      padding: 20px;
+      flex-direction: row;
+    }
+    dl {
+      display: table;
+      > div {
+        display: table-row;
+        > dt,
+        > dd {
+          display: table-cell;
+          padding: 0.25em;
+          max-width: 250px;
+          @extend .label-style;
+        }
+        > dt {
+          @extend .label-value;
+          text-align: right;
+          &::after {
+            content: ":";
+            padding: 0 0.25em 0 0.5em;
+          }
+        }
+      }
+    }
+  }
+  &__left {
+    flex: 0 1 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @include for-desktop-up {
+      border-right: 1px solid $color-border;
+    }
+
+    .profile-image {
+      img {
+        width: 15vw;
+        border-radius: 50%;
+        aspect-ratio: 1;
+        object-fit: contain;
+      }
+    }
+    p {
+      @extend .label-style;
+      margin: 0;
+    }
+    hr {
+      border: 1px solid $color-border;
+      width: 50%;
+    }
+    h2 {
+      @extend .label-value;
+      margin: 0;
+    }
+  }
+  &__right {
+    flex: 0 1 65%;
+    @include for-desktop-up {
+      padding-left: 3rem;
+    }
+    h2 {
+      @extend .label-value;
+    }
+    dl {
+      margin-left: 3em;
+    }
+    img {
+      @include for-desktop-up {
+        margin-left: 3em;
+      }
+      border-radius: 16px;
+      height: 50%;
+      width: 100%;
+      object-fit: cover;
+    }
+    .lat-long-container {
+      display: flex;
+      gap: 20px;
+      justify-content: flex-end;
+      align-items: center;
+      p {
+        @extend .label-value;
+        font: 1em $font--light !important;
+      }
+      span {
+        @extend .label-style;
+        font: 1em $font--heavy;
+      }
+    }
+  }
+}

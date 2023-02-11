@@ -1,0 +1,33 @@
+@import "./../../index.scss";
+.header {
+  border-bottom: 1px solid $color-border;
+  padding-bottom: 10px;
+  &__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    .module-name {
+      text-transform: capitalize;
+      font: 1.5em $font--medium;
+    }
+  }
+  .user-profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    cursor: pointer;
+    img {
+      width: 40px;
+      aspect-ratio: 1;
+      border-radius: 50%;
+    }
+    p{
+      color:$color-primary;
+      font: 1.2em "Avenir LT Std Medium";
+      margin: 0;
+      padding: 0;
+    }
+  }
+}

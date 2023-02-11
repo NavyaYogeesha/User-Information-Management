@@ -1,0 +1,19 @@
+@import "./../../index.scss";
+
+.coming-soon {
+  height: 90%;
+  &__container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h2 {
+      font: 5.56em $font--black;
+      text-align: center;
+      @include for-desktop-up {
+        font: 7.56em $font--black;
+      }
+      color: $color-variantOffWhite;
+    }
+  }
+}

@@ -1,0 +1,85 @@
+@import "../../index.scss";
+.chat {
+  width: 350px;
+  border-bottom: none;
+  border-radius: 14px;
+  z-index: 11;
+  height: auto;
+  &.open {
+    height: 20vw;
+    padding-bottom: 4em;
+  }
+
+  &__header {
+    height: 16%;
+    background-color: $color-accentBlue;
+    border: 3px solid $color-accentBlue;
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    &__icon {
+      stroke-width: 8%;
+      color: $color-white;
+      padding: 4%;
+      padding-right: 0;
+      flex: 0 1 16%;
+    }
+    p {
+      color: $color-white;
+      font-weight: 400;
+      font: 1.4375em $font--roman;
+      flex: 0 1 76%;
+    }
+    &__dropdown {
+      flex: 0 1 20%;
+      color: $color-white;
+      font-size: 24px;
+    }
+    &__dropdown-open {
+      color: $color-white;
+      font-size: 24px;
+      flex: 0 1 20%;
+      transform: rotate(180deg);
+    }
+  }
+  &__contacts {
+    background: $color-white;
+    border: 1px solid $color-borderBlue;
+    border-bottom: none;
+    border-top: none;
+    overflow-y: auto;
+    max-height: 100%;
+    .contact-details {
+      padding-top: 1%;
+      display: flex;
+      padding-left: 8%;
+      justify-content: space-between;
+      align-items: center;
+      img {
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+      p {
+        flex: 0 1 54%;
+        margin: 0;
+        font: 1.25em $font--light;
+        color: $color-brown;
+        cursor: pointer;
+      }
+    }
+    &__status {
+      flex: 0 1 20%;
+      font-size: 38px;
+      color: $color-green;
+    }
+    &__offline{
+      flex: 0 1 20%;
+      font-size: 38px;
+      color: $color-secondary;
+    }
+  }
+}
